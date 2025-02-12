@@ -1,0 +1,42 @@
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fefae0;
+    transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.menu-button {
+    transition: transform 0.3s ease;
+}
+.menu-button:hover {
+    transform: scale(1.05);
+}
+.hero-title {
+    transition: text-shadow 0.3s ease;
+}
+.hero-title:hover {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.contact-button {
+    transition: all 0.3s ease;
+}
+.contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.social-link {
+    transition: all 0.3s ease;
+}
+.social-link:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+}

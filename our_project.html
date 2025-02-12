@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <div class="w-full min-h-screen relative overflow-x-hidden flex flex-col">
+        <!-- Navbar -->
+        <nav class="w-full bg-[#606c38]/90 sticky top-0 z-50 px-4 py-2 backdrop-blur-sm transition-all duration-300">
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center">
+                    <div class="text-left cursor-pointer hover:opacity-90 transition-opacity">
+                        <h1 class="text-white text-2xl md:text-3xl font-medium font-['Poppins'] leading-normal [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">Architectural Agency</h1>
+                        <p class="text-[#fffefb]/60 text-sm md:text-base font-normal font-['Poppins'] leading-none [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">Explore our projects</p>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="menu-toggle" class="md:hidden text-white menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+    
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">Home</a>
+                        <a href="our_project.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">Project</a>
+                        <a href="about_us.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">About us</a>
+                        <a href="contact.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">Contact</a>
+                        <button class="menu-button bg-[#d9d9d9] text-black px-6 py-2 rounded-full text-lg md:text-xl font-medium font-['Poppins'] hover:bg-[#ffffff] transition-colors">Let's talk</button>
+                    </div>
+                </div>
+    
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                    <div class="flex flex-col space-y-4">
+                        <a href="home.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Home</a>
+                        <a href="our_project.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Project</a>
+                        <a href="about_us.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">About us</a>
+                        <a href="contact.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Contact</a>
+                        <button class="menu-button bg-[#d9d9d9] text-black px-6 py-2 rounded-full text-lg font-medium font-['Poppins'] w-fit hover:bg-[#ffffff] transition-colors">Let's talk</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+      <!-- Projects Section -->
+      <div class="w-full bg-[#283618] px-4 py-8">
+        <div class="text-[#fefae0] text-5xl md:text-7xl font-medium font-['Poppins'] ml-4 md:ml-[79px]">Our Project</div>
+        <div class="text-[#fefae0] text-2xl md:text-2xl font-medium font-['Poppins'] max-w-full md:max-w-[877px] ml-4 md:ml-[713px]">
+          Every project is a fusion of creativity, innovation, and functionality. We take pride in designing and delivering architectural masterpieces that not only meet but exceed expectations.
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 px-4">
+          <div class="w-full md:w-[524px] h-auto md:h-[364px] bg-[#fefae0] rounded-[48px] p-4">
+            <div class="text-[#283618] text-3xl md:text-5xl font-medium font-['Poppins'] mb-4">Residential Architecture</div>
+            <img class="w-full h-[200px] md:h-[240px] object-cover rounded-[48px]" src="images/a.jpeg" alt="Residential Architecture" />
+          </div>
+
+          <div class="w-full md:w-[524px] h-auto md:h-[364px] bg-[#fefae0] rounded-[48px] p-4">
+            <div class="text-[#283618] text-3xl md:text-5xl font-medium font-['Poppins'] mb-4">Commercial & Office Spaces</div>
+            <img class="w-full h-[200px] md:h-[240px] object-cover rounded-[48px]" src="images/A Commercial & Office Building with clean lines, open spaces, and large windows, soft natural lighti....jpeg" alt="Commercial & Office Spaces" />
+          </div>
+
+          <div class="w-full md:w-[524px] h-auto md:h-[364px] bg-[#fefae0] rounded-[48px] p-4">
+            <div class="text-[#283618] text-3xl md:text-5xl font-medium font-['Poppins']">Urban & Public Spaces</div>
+            <img class="w-full h-[200px] md:h-[240px] object-cover rounded-[48px]" src="images/Urban & Public Spaces park building..jpeg" alt="Urban & Public Spaces" />
+          </div>
+        </div>
+      </div>
+      <footer class="bg-black text-[#fefae0] p-8">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-medium mb-2">Office Address:</h3>
+                    <p class="text-lg md:text-xl">Jl. Pendidikan No. 777</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-medium mb-2">Phone:</h3>
+                    <p class="text-lg md:text-xl">+62 123-4567-890</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-medium mb-2">Email:</h3>
+                    <p class="text-lg md:text-xl">Agency@gmail.com</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-medium mb-2">Website:</h3>
+                    <p class="text-lg md:text-xl">www.agency.com</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-medium mb-2">Working Hours:</h3>
+                    <p class="text-lg md:text-xl">Monday – Friday: 9:00 AM – 6:00 PM</p>
+                    <p class="text-lg md:text-xl">Saturday: 10:00 AM – 4:00 PM</p>
+                    <p class="text-lg md:text-xl">Sunday: Closed</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <h3 class="text-3xl md:text-4xl font-medium">Follow Us on Social Media:</h3>
+                <div class="flex justify-center space-x-8 mt-4">
+                    <a href="#" class="hover:opacity-80 transition duration-300">
+                        <img src="images/instagram.png" alt="Instagram" class="w-[60px] h-[60px]">
+                    </a>
+                    <a href="#" class="hover:opacity-80 transition duration-300">
+                        <svg width="60" height="60" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M82.2002 44.6999C82.2002 24 65.4002 7.19995 44.7002 7.19995C24.0002 7.19995 7.2002 24 7.2002 44.6999C7.2002 62.8499 20.1002 77.9624 37.2002 81.4499V55.9499H29.7002V44.6999H37.2002V35.3249C37.2002 28.0875 43.0877 22.2 50.3252 22.2H59.7002V33.4499H52.2002C50.1377 33.4499 48.4502 35.1374 48.4502 37.1999V44.6999H59.7002V55.9499H48.4502V82.0125C67.3877 80.1375 82.2002 64.1624 82.2002 44.6999Z" fill="#FEFAE0"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:opacity-80 transition duration-300">
+                        <svg width="60" height="60" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M70.875 4.21716H84.6771L54.5271 38.7643L90 85.7829H62.2286L40.4614 57.2722L15.5829 85.7829H1.76786L34.0136 48.8186L0 4.22359H28.4786L48.1243 30.2786L70.875 4.21716ZM66.0214 77.5029H73.6714L24.3 12.0664H16.0971L66.0214 77.5029Z" fill="#FEFAE0"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <p class="text-2xl md:text-3xl">&copy; Copyright 2025</p>
+                <div class="text-base md:text-lg mt-2">
+                    Icons made by <a href="https://www.flaticon.com/authors/freepik" class="hover:text-gray-300" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" class="hover:text-gray-300" title="Flaticon">www.flaticon.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

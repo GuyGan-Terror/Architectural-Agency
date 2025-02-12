@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Architectural Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#FEFAE0]">
+    <div class="min-h-screen">
+        <nav class="w-full bg-[#606c38]/90 sticky top-0 z-50 px-4 py-2 backdrop-blur-sm transition-all duration-300">
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center">
+                    <div class="text-left cursor-pointer hover:opacity-90 transition-opacity">
+                        <h1 class="text-white text-2xl md:text-3xl font-medium font-['Poppins'] leading-normal [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">Architectural Agency</h1>
+                        <p class="text-[#fffefb]/60 text-sm md:text-base font-normal font-['Poppins'] leading-none [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">Explore our projects</p>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="menu-toggle" class="md:hidden text-white menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+    
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">Home</a>
+                        <a href="our_project.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">Project</a>
+                        <a href="about_us.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">About us</a>
+                        <a href="contact.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">Contact</a>
+                        <button class="menu-button bg-[#d9d9d9] text-black px-6 py-2 rounded-full text-lg md:text-xl font-medium font-['Poppins'] hover:bg-[#ffffff] transition-colors">Let's talk</button>
+                    </div>
+                </div>
+    
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                    <div class="flex flex-col space-y-4">
+                        <a href="home.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Home</a>
+                        <a href="our_project.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Project</a>
+                        <a href="about_us.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">About us</a>
+                        <a href="contact.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Contact</a>
+                        <button class="menu-button bg-[#d9d9d9] text-black px-6 py-2 rounded-full text-lg font-medium font-['Poppins'] w-fit hover:bg-[#ffffff] transition-colors">Let's talk</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contact Form Section -->
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="email" placeholder="Email" class="w-full p-4 bg-[#bad26c] rounded-[48px] text-[#283618] placeholder-[#283618]/70 text-xl font-medium font-['Poppins']">
+                        <input type="tel" placeholder="Phone" class="w-full p-4 bg-[#bad26c] rounded-[48px] text-[#283618] placeholder-[#283618]/70 text-xl font-medium font-['Poppins']">
+                    </div>
+                    <input type="text" placeholder="Name" class="w-full p-4 bg-[#bad26c] rounded-[48px] text-[#283618] placeholder-[#283618]/70 text-xl font-medium font-['Poppins']">
+                    <textarea placeholder="Message" rows="6" class="w-full p-4 bg-[#bad26c] rounded-[48px] text-[#283618] placeholder-[#283618]/70 text-xl font-medium font-['Poppins']"></textarea>
+                    <button class="px-12 py-4 bg-[#283618] text-[#bad26c] rounded-[48px] text-xl font-medium font-['Poppins']">Submit</button>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:pl-8">
+                    <h2 class="text-[#283618] text-4xl font-bold font-['Poppins'] mb-6">Contact Us!!!</h2>
+                    <p class="text-[#283618] text-xl md:text-2xl font-normal font-['Poppins'] leading-relaxed mb-8">
+                        We would love to hear from you! Whether you're planning a new project, need architectural consultation, or simply want to explore ideas, our team is ready to assist you.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- Phone Card -->
+                <div class="bg-[#606c38] p-8 rounded-[48px] text-white">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-12 h-12" viewBox="0 0 86 86" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M74.3171 52.5799C73.9089 49.7438 71.7191 47.5327 68.8999 46.8736C57.9423 44.3054 55.1954 37.9952 54.7319 30.9963C52.7887 30.6348 49.3318 30.2437 43.4639 30.2437C37.596 30.2437 34.139 30.6348 32.1958 30.9963C31.7323 37.9952 28.9855 44.3054 18.0278 46.8736C15.2087 47.5369 13.0188 49.7438 12.6106 52.5799L10.4973 67.2157C9.75322 72.3692 13.5376 77.0168 18.8017 77.0168H68.1261C73.3859 77.0168 77.1745 72.3692 76.4304 67.2157L74.3171 52.5799ZM43.4639 66.3525C37.5322 66.3525 32.7231 61.5901 32.7231 55.7222C32.7231 49.8543 37.5322 45.092 43.4639 45.092C49.3955 45.092 54.2047 49.8543 54.2047 55.7222C54.2047 61.5901 49.3913 66.3525 43.4639 66.3525Z"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold ml-4">+62 123-4567-890</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed">Call us during business hours for immediate assistance with your architectural needs.</p>
+                </div>
+
+                <!-- Email Card -->
+                <div class="bg-[#606c38] p-8 rounded-[48px] text-white">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-12 h-12" viewBox="0 0 86 86" fill="none" stroke="white" stroke-width="4">
+                            <path d="M15.1157 18.196H71.8104C73.7592 18.196 75.3538 19.7906 75.3538 21.7395V64.2605C75.3538 66.2093 73.7592 67.8039 71.8104 67.8039H15.1157C13.1668 67.8039 11.5723 66.2093 11.5723 64.2605V21.7395C11.5723 19.7906 13.1668 18.196 15.1157 18.196Z"/>
+                            <path d="M11.5723 23.5112L43.463 43L75.3538 23.5112"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold ml-4">Agency@gmail.com</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed">Send us an email anytime. We typically respond within 24 hours.</p>
+                </div>
+
+                <!-- Address Card -->
+                <div class="bg-[#606c38] p-8 rounded-[48px] text-white">
+                    <div class="flex items-center mb-4">
+                        <a href="#" class="hover:opacity-80">
+                            <img src="images/pin.png" alt="Pin" width="50" height="50">
+                        </a>
+                        <h3 class="text-2xl font-semibold ml-4">Jl. Pendidikan No. 777</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed">Visit our office to discuss your architectural projects in person.</p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="mt-12 rounded-[48px] overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d207.0880027184706!2d98.70151776220588!3d3.515137389067234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1739263270694!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-black text-[#fefae0] mt-12 p-8">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                    <div>
+                        <h3 class="text-xl font-medium mb-2">Office Address:</h3>
+                        <p>Jl. Pendidikan No. 777</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-2">Phone:</h3>
+                        <p>+62 123-4567-890</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-2">Email:</h3>
+                        <p>Agency@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-2">Website:</h3>
+                        <p>www.agency.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-2">Working Hours:</h3>
+                        <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+                        <p>Saturday: 10:00 AM – 4:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl md:text-3xl font-medium mb-8">Follow Us on Social Media:</h3>
+                    <div class="flex justify-center space-x-8">
+                        <a href="#" class="hover:opacity-80">
+                            <img src="images/instagram.png" alt="Instagram" width="50" height="50">
+                        </a>
+                        <a href="#" class="hover:opacity-80">
+                            <svg width="50" height="50" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M82.2002 44.6999C82.2002 24 65.4002 7.19995 44.7002 7.19995C24.0002 7.19995 7.2002 24 7.2002 44.6999C7.2002 62.8499 20.1002 77.9624 37.2002 81.4499V55.9499H29.7002V44.6999H37.2002V35.3249C37.2002 28.0875 43.0877 22.2 50.3252 22.2H59.7002V33.4499H52.2002C50.1377 33.4499 48.4502 35.1374 48.4502 37.1999V44.6999H59.7002V55.9499H48.4502V82.0125C67.3877 80.1375 82.2002 64.1624 82.2002 44.6999Z" fill="#FEFAE0"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:opacity-80">
+                            <svg width="50" height="50" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M70.875 4.21716H84.6771L54.5271 38.7643L90 85.7829H62.2286L40.4614 57.2722L15.5829 85.7829H1.76786L34.0136 48.8186L0 4.22359H28.4786L48.1243 30.2786L70.875 4.21716ZM66.0214 77.5029H73.6714L24.3 12.0664H16.0971L66.0214 77.5029Z" fill="#FEFAE0"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-xl">&copy; Copyright 2025</p>
+                </div>
+                <div class="text-center text-sm">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

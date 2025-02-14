@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us - Architectural Agency</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stat-counter {
+            transition: all 2s ease-out;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body class="flex flex-col min-h-screen">
     <!-- Navbar -->
-    <nav class="w-full bg-[#606c38]/90 sticky top-0 z-50 px-4 py-2 backdrop-blur-sm transition-all duration-300">
+     <!-- Navbar section - keeping existing navbar code -->
+     <nav class="w-full bg-[#606c38]/90 sticky top-0 z-50 px-4 py-2 backdrop-blur-sm transition-all duration-300">
         <div class="container mx-auto">
             <div class="flex justify-between items-center">
                 <div class="text-left cursor-pointer hover:opacity-90 transition-opacity">
@@ -33,18 +54,18 @@
                     <a href="our_project.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">Project</a>
                     <a href="about_us.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">About us</a>
                     <a href="contact.html" class="nav-link text-white text-lg md:text-xl font-medium font-['Poppins']">Contact</a>
-                    <button class="menu-button bg-[#d9d9d9] text-black px-6 py-2 rounded-full text-lg md:text-xl font-medium font-['Poppins'] hover:bg-[#ffffff] transition-colors">Let's talk</button>
+                    <a href="contact.html" class="menu-button bg-[#d9d9d9] text-black px-6 py-2 rounded-full text-lg md:text-xl font-medium font-['Poppins'] hover:bg-[#ffffff] transition-colors">Let's talk</a>
                 </div>
             </div>
 
             <!-- Mobile menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="home.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Home</a>
+                    <a href="index.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Home</a>
                     <a href="our_project.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Project</a>
                     <a href="about_us.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">About us</a>
                     <a href="contact.html" class="text-white text-lg font-medium font-['Poppins'] hover:text-[#fefae0] transition-colors">Contact</a>
-                    <button class="menu-button bg-[#d9d9d9] text-black px-6 py-2 rounded-full text-lg font-medium font-['Poppins'] w-fit hover:bg-[#ffffff] transition-colors">Let's talk</button>
+                    <a href="contact.html" class="menu-button bg-[#d9d9d9] text-black px-6 py-2 rounded-full text-lg font-medium font-['Poppins'] w-fit hover:bg-[#ffffff] transition-colors">Let's talk</a>
                 </div>
             </div>
         </div>
@@ -53,31 +74,65 @@
     <div class="flex-grow bg-gradient-to-b from-[#283618] to-[#606C38] p-4">
         <div class="container mx-auto py-8">
             <div class="bg-[#fefae0] rounded-3xl p-8 md:p-12">
-                <h2 class="text-[#283618] text-3xl md:text-4xl font-medium font-['Poppins'] mb-8">About Us</h2>
+                <h2 class="text-[#283618] text-3xl md:text-4xl font-medium font-['Poppins'] mb-8 fade-in">About Us</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                    <div class="text-center">
-                        <div class="text-[#283618] text-5xl md:text-6xl font-medium font-['Poppins']">30+</div>
+                    <div class="text-center fade-in hover-scale">
+                        <div class="text-[#283618] text-5xl md:text-6xl font-medium font-['Poppins'] stat-counter" data-target="30">0</div>
                         <div class="text-[#606c38] text-xl font-medium font-['Poppins']">Years in business</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-[#283618] text-5xl md:text-6xl font-medium font-['Poppins']">32</div>
+                    <div class="text-center fade-in hover-scale">
+                        <div class="text-[#283618] text-5xl md:text-6xl font-medium font-['Poppins'] stat-counter" data-target="32">0</div>
                         <div class="text-[#606c38] text-xl font-medium font-['Poppins']">Team Members</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-[#283618] text-5xl md:text-6xl font-medium font-['Poppins']">34</div>
+                    <div class="text-center fade-in hover-scale">
+                        <div class="text-[#283618] text-5xl md:text-6xl font-medium font-['Poppins'] stat-counter" data-target="34">0</div>
                         <div class="text-[#606c38] text-xl font-medium font-['Poppins']">Award gain</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-[#283618] text-5xl md:text-6xl font-medium font-['Poppins']">50+</div>
+                    <div class="text-center fade-in hover-scale">
+                        <div class="text-[#283618] text-5xl md:text-6xl font-medium font-['Poppins'] stat-counter" data-target="50">0</div>
                         <div class="text-[#606c38] text-xl font-medium font-['Poppins']">Project completed</div>
                     </div>
                 </div>
 
-                <p class="text-[#606c38] text-lg md:text-2xl font-medium font-['Poppins'] leading-relaxed mb-8">
+                <p class="text-[#606c38] text-lg md:text-2xl font-medium font-['Poppins'] leading-relaxed mb-8 fade-in">
                     We turn imagination into reality through thoughtful architecture and innovative design. Our team of experienced architects and designers is dedicated to creating functional, aesthetically pleasing, and sustainable spaces that enhance the way people live and work.
                 </p>
-                <div class="w-32 md:w-64 h-1 bg-[#606c38]"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-xl p-6 shadow-lg fade-in hover-scale">
+                        <h3 class="text-[#283618] text-2xl font-medium mb-4">Our Mission</h3>
+                        <p class="text-[#606c38] text-lg leading-relaxed">
+                            To create innovative and sustainable architectural solutions that transform spaces and enrich lives, while maintaining the highest standards of design excellence and client satisfaction.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg fade-in hover-scale">
+                        <h3 class="text-[#283618] text-2xl font-medium mb-4">Our Vision</h3>
+                        <p class="text-[#606c38] text-lg leading-relaxed">
+                            To be the leading architectural firm known for creating timeless designs that harmoniously blend functionality, aesthetics, and environmental responsibility.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h3 class="text-[#283618] text-2xl font-medium mb-6 fade-in">Our Core Values</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg fade-in hover-scale">
+                            <h4 class="text-[#283618] text-xl font-medium mb-3">Innovation</h4>
+                            <p class="text-[#606c38]">Pushing boundaries and embracing new technologies to create unique solutions.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg fade-in hover-scale">
+                            <h4 class="text-[#283618] text-xl font-medium mb-3">Sustainability</h4>
+                            <p class="text-[#606c38]">Committed to eco-friendly practices and sustainable design principles.</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg fade-in hover-scale">
+                            <h4 class="text-[#283618] text-xl font-medium mb-3">Excellence</h4>
+                            <p class="text-[#606c38]">Delivering exceptional quality and attention to detail in every project.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-32 md:w-64 h-1 bg-[#606c38] fade-in"></div>
             </div>
         </div>
     </div>
@@ -143,6 +198,48 @@
 
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fade-in effect
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.stat-counter');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 16); // 60fps
+            let current = 0;
+
+            const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCounter();
+                    counterObserver.unobserve(counter);
+                }
+            });
+
+            counterObserver.observe(counter);
         });
     </script>
 </body>
